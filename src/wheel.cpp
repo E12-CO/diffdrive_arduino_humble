@@ -17,5 +17,5 @@ void Wheel::setup(const std::string &wheel_name, int counts_per_rev)
 
 double Wheel::calcEncAngle()
 {
-  return enc * rads_per_count;
+  return (enc/27) * rads_per_count;
 }
