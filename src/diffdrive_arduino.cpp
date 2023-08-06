@@ -79,6 +79,8 @@ CallbackReturn DiffDriveArduino::on_activate(const rclcpp_lifecycle::State & /* 
   // arduino.setPidValues(9,7,0,100);
   // arduino.setPidValues(14,7,0,100);
   // arduino_.setPidValues(30, 20, 0, 100);
+  arduino_.sendMsg("r\r");
+  arduino_.setMotorValues(0, 0);
 
   return CallbackReturn::SUCCESS;
 }
